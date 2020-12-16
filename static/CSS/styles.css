@@ -1,0 +1,16 @@
+#about-main-row {
+    height: 100%;
+}
+
+#about-container {
+    height: calc(100vh - 4rem);
+}
+
+.navbar {
+    height: 4rem;
+}
+
+#avatar {
+    height: auto;
+    width: 200px;
+}

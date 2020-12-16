@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>About</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static "/CSS/styles.css" %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "/favicon/apple-touch-icon.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "/favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "/favicon/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "/favicon/site.webmanifest" %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">OG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Обо мне</a>
+                    <a class="nav-link" href="#">Скиллы</a>
+                    <a class="nav-link" href="#">Проекты</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" id="about-container">
+        <div class="row" id="about-main-row">
+            <div class="col-auto bg-dark ">
+                <img class="rounded float-start" src="{% static "avatar.jpg" %}" id="avatar" alt="Мое фото">
+            </div>
+            <div class="col">
+                {% for skill in skills %}
+                    <button type="button" class="btn btn-light ">{{ skill }}</button>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
