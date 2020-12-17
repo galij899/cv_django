@@ -1,16 +1,38 @@
-#about-main-row {
-    height: 100%;
-}
-
 #about-container {
     height: calc(100vh - 4rem);
 }
 
-.navbar {
+nav {
     height: 4rem;
 }
 
-#avatar {
-    height: auto;
-    width: 200px;
+.avatar {
+    margin: 20px;
+    border-radius: 50%;
+}
+
+.cloud {
+    max-width: 400px;
+}
+
+.bio {
+    display: block;
+    color: white;
+    text-align: center;
+}
+
+.social {
+    margin: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.social i {
+    font-size: 30px;
+    margin: 0px 5px;
+}
+
+.bottom-space {
+    margin-bottom: 30px;
 }

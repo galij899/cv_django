@@ -6,3 +6,6 @@ from .models import Skill
 def about(request):
     skills = Skill.objects.all()
     return render(request, 'cv/about.html', {"skills": skills})
+
+def skills(request):
+    return render(request, 'cv/skills.html')
