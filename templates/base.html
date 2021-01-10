@@ -25,8 +25,8 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="{% url 'about' %}">Обо мне</a>
-                <a class="nav-link" href="{%  url 'skills' %}">Скиллы</a>
-                <a class="nav-link" href="#">Проекты</a>
+{#                <a class="nav-link" href="{%  url 'skills' %}">Скиллы</a>#}
+{#                <a class="nav-link" href="#">Проекты</a>#}
             </div>
         </div>
     </div>
@@ -46,7 +46,7 @@
                 <a href="https://github.com/galij899"><i class="fab fa-github"></i></a>
             </div>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-9 pt-3">
             {% block content %}
             {% endblock %}
        </div>
