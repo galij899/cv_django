@@ -1,1 +1,1 @@
-web: gunicorn django-cv-galij899.wsgi --log-file -
+web: gunicorn django-cv-galij899.wsgi --log-file
