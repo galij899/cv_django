@@ -7,15 +7,15 @@
         <h2>Образование</h2>
         <div class="row py-2">
             <div class="col-sm-6">
-                <div class="card">
+                <div class="card border-primary">
                     <div class="card-body">
                         <h5 class="card-title">Major</h5>
-                        <p class="card-text">НИУ ВШЭ СПб, ОП "Экономика", 2018 - н.в.</p>
+                        <p class="card-text">НИУ ВШЭ СПб, Экономика, 2018 - н.в.</p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6">
-                <div class="card">
+                <div class="card border-secondary">
                     <div class="card-body">
                         <h5 class="card-title">Minor</h5>
                         <p class="card-text">НИУ ВШЭ СПб, Computer Science, 2019 - н.в.</p>
@@ -36,7 +36,7 @@
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             {{ skill.name }}
                             <small>{{ skill.descr }}</small>
-                            <span class="badge badge-primary badge-pill">{{ skill.level }}/10</span>
+                            <span class="badge badge-dark badge-pill">{{ skill.level }}/10</span>
                         </li>
                     {% endfor %}
 
@@ -49,8 +49,8 @@
                     {% for web_skill in web %}
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             {{ web_skill.name }}
-                            <small>подпись</small>
-                            <span class="badge badge-primary badge-pill">{{ web_skill.level }}/10</span>
+                            <small>{{ web_skill.descr }}</small>
+                            <span class="badge badge-dark badge-pill">{{ web_skill.level }}/10</span>
                         </li>
                     {% endfor %}
                 </ul>
@@ -59,14 +59,50 @@
                     {% for gen in general %}
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             {{ gen.name }}
-                            <small>подпись</small>
-                            <span class="badge badge-primary badge-pill">{{ gen.level }}/10</span>
+                            <small>{{ gen.descr }}</small>
+                            <span class="badge badge-dark badge-pill">{{ gen.level }}/10</span>
                         </li>
                     {% endfor %}
                 </ul>
             </div>
         </div>
 
-    </div>
+        <hr>
 
+        <h2>Языки</h2>
+
+        <div class="row pt-2">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        Английский, C1-C2, свободно разговариваю
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Проекты и достижения</h2>
+
+        <div class="row py-2">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Проект "Parsing Data With Python On College Admissions In Russia"</h5>
+                        <p class="card-text">Участие в сборе данных для магистерской работы</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Yandex Cup 2020</h5>
+                        <p class="card-text">Направление "Аналитика", финалист</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 {% endblock %}
