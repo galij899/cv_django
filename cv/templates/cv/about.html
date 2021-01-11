@@ -35,7 +35,7 @@
                     {% for skill in skills %}
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             {{ skill.name }}
-                            {% if skill.descr == "-"  %}
+                            {% if skill.descr != "-"  %}
                                 <small>{{ skill.descr }}</small>
                             {% endif %}
                             <span class="badge badge-dark badge-pill">{{ skill.level }}/10</span>
@@ -51,7 +51,7 @@
                     {% for web_skill in web %}
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             {{ web_skill.name }}
-                            {% if web_skill.descr == "-"  %}
+                            {% if web_skill.descr != "-"  %}
                                 <small>{{ web_skill.descr }}</small>
                             {% endif %}
                             <span class="badge badge-dark badge-pill">{{ web_skill.level }}/10</span>
@@ -63,7 +63,7 @@
                     {% for gen in general %}
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             {{ gen.name }}
-                            {% if gen.descr == "-"  %}
+                            {% if gen.descr != "-"  %}
                                 <small>{{ gen.descr }}</small>
                             {% endif %}
                             <span class="badge badge-dark badge-pill">{{ gen.level }}/10</span>
