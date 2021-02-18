@@ -10,3 +10,17 @@ class Skill(models.Model):
 
     def __str__(self):
         return self.name
+
+class Project(models.Model):
+    name = models.CharField(max_length=50)
+    descr = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.name
+
+class SoftSkill(models.Model):
+    name = models.CharField(max_length=50)
+    descr = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.name

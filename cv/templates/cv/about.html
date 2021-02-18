@@ -75,6 +75,40 @@
 
         <hr>
 
+        <h2>Проекты и достижения</h2>
+
+        <div class="row py-2">
+            {% for proj in projects %}
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ proj.name }}</h5>
+                        <p class="card-text">{{ proj.descr }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <h2>Soft skills</h2>
+
+        <div class="row py-2">
+            {% for soft in softs %}
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ soft.name }}</h5>
+                            <p class="card-text">{{ soft.descr }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
         <h2>Языки</h2>
 
         <div class="row pt-2">
@@ -82,29 +116,6 @@
                 <div class="card">
                     <div class="card-body">
                         Английский, C1-C2, свободно разговариваю
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <hr>
-
-        <h2>Проекты и достижения</h2>
-
-        <div class="row py-2">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Проект "Parsing Data With Python On College Admissions In Russia"</h5>
-                        <p class="card-text">Участие в сборе данных для магистерской работы</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Yandex Cup 2020</h5>
-                        <p class="card-text">Направление "Аналитика", финалист</p>
                     </div>
                 </div>
             </div>
