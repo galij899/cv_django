@@ -79,8 +79,11 @@ WSGI_APPLICATION = 'cv_django.wsgi.application'
 
 import dj_database_url
 
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+DATABASES = {
+
+}
+DATABASES['default'] = dj_database_url.config(default='postgresql://localhost/cv',
+                                              conn_max_age=600)
 
 
 # Password validation
