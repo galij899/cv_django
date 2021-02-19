@@ -7,19 +7,12 @@ nav {
 }
 
 .avatar {
-    margin: 20px;
-    margin-bottom: 50px;
+    margin: 10px;
     border-radius: 50%;
 }
 
-.bio {
-    display: block;
-    color: white;
-    text-align: center;
-}
-
 .social {
-    margin: 40px;
+    margin: 20px 40px 10px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -27,9 +20,17 @@ nav {
 
 .social i {
     font-size: 30px;
-    margin: 0px 5px;
+    margin: 0 5px;
 }
 
 .bottom-space {
     margin-bottom: 30px;
+}
+
+a {
+    color: #40abf7;
+}
+
+a:hover {
+    color: #168ce0;
 }

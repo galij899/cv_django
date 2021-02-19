@@ -4,17 +4,34 @@
 
 {% block content %}
     <div class="container-lg">
+
+        <h2>Основная информация</h2>
+
+        <div class="row pt-2 pb-3">
+            <div class="col-sm-12">
+                <ul class="list-group">
+                    <li class="list-group-item"><span class="font-weight-bold">Проживаю:</span> Санкт-Петербург, м. Лесная</li>
+                    <li class="list-group-item"><span class="font-weight-bold">Гражданство:</span> Россия</li>
+                    <li class="list-group-item"><span class="font-weight-bold">Занятость:</span> Стажировка, частичная занятость (20 часов в неделю)</li>
+                    <li class="list-group-item"><span class="font-weight-bold">График работы:</span> Удаленная работа, гибкий график</li>
+                    <li class="list-group-item">Не готов к переезду, не готов к командировкам</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
         <h2>Образование</h2>
         <div class="row py-2">
-            <div class="col-sm-6">
-                <div class="card border-primary">
+            <div class="col-sm-6 p-2">
+                <div class="card border-secondary">
                     <div class="card-body">
                         <h5 class="card-title">Major</h5>
                         <p class="card-text">НИУ ВШЭ СПб, Экономика, 2018 - н.в.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 p-2">
                 <div class="card border-secondary">
                     <div class="card-body">
                         <h5 class="card-title">Minor</h5>
@@ -29,7 +46,7 @@
         <h2>Навыки</h2>
 
         <div class="row pt-2">
-            <div class="col-sm-6">
+            <div class="col-sm-6 p-2">
                 <h5 class="pt-2">Python</h5>
                 <ul class="list-group">
                     {% for skill in skills %}
@@ -45,7 +62,7 @@
                 </ul>
             </div>
 
-            <div class="col-sm-6">
+            <div class="col-sm-6 p-2">
                 <h5 class="pt-2">Web</h5>
                 <ul class="list-group">
                     {% for web_skill in web %}
@@ -79,11 +96,18 @@
 
         <div class="row py-2">
             {% for proj in projects %}
-            <div class="col-sm-6">
-                <div class="card">
+            <div class="col-sm-6 p-2">
+                <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title">{{ proj.name }}</h5>
                         <p class="card-text">{{ proj.descr }}</p>
+                        <p class="card-text"><small class="text-muted">{{ proj.stack }}</small>
+                        {% if proj.hasLink %}
+                            <a href="{{ proj.link }}">
+                                <span class="badge badge-dark badge-pill float-right">Ссылка</span>
+                            </a>
+                        {% endif %}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -96,8 +120,8 @@
 
         <div class="row py-2">
             {% for soft in softs %}
-                <div class="col-sm-6">
-                    <div class="card">
+                <div class="col-sm-6 p-2">
+                    <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">{{ soft.name }}</h5>
                             <p class="card-text">{{ soft.descr }}</p>
@@ -111,7 +135,7 @@
 
         <h2>Языки</h2>
 
-        <div class="row pt-2">
+        <div class="row pt-2 pb-3">
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">

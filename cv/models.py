@@ -12,14 +12,17 @@ class Skill(models.Model):
         return self.name
 
 class Project(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=100)
     descr = models.CharField(max_length=300)
+    stack = models.CharField(max_length=150)
+    hasLink = models.BooleanField(default=True)
+    link = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
         return self.name
 
 class SoftSkill(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=100)
     descr = models.CharField(max_length=300)
 
     def __str__(self):
