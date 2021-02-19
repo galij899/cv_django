@@ -27,10 +27,14 @@ nav {
     margin-bottom: 30px;
 }
 
-a {
+.my-color {
     color: #40abf7;
 }
 
-a:hover {
+.my-color:hover {
     color: #168ce0;
+}
+
+.white-link, .white-link:hover, .white-link:active {
+    color: white;
 }

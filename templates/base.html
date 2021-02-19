@@ -16,34 +16,19 @@
     <link rel="manifest" href="{% static "/favicon/site.webmanifest" %}">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">OG</a>
-{#        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">#}
-{#            <span class="navbar-toggler-icon"></span>#}
-{#        </button>#}
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="{% url 'about' %}">Обо мне</a>
-{#                <a class="nav-link" href="{%  url 'skills' %}">Скиллы</a>#}
-{#                <a class="nav-link" href="#">Проекты</a>#}
-            </div>
-        </div>
-    </div>
-</nav>
 <div class="container-fluid" id="about-container">
     <div class="row">
-        <div class="col-sm-3 bg-dark sidebar">
+        <div class="col-sm-3 bg-dark sidebar pt-4">
             <img class="rounded-circle mx-auto d-block img-fluid avatar" src="{% static "avatar.jpg" %}" id="avatar" alt="Мое фото">
             <p class="h3 text-center text-light">Галичкин Олег</p>
             <p class="h6 text-center text-light bottom-space">20 лет</p>
-            <p class="fw-light text-center text-light bottom-space">Python-программист, учусь в НИУ ВШЭ СПб. Backend-разработка на Django, Data Science/ML</p>
-            <p class="fw-lighter text-center text-light m-0 "><a href="tel: +79119326577">+7 (911) 932-65-77</a></p>
-            <p class="fw-lighter text-center text-light"><a href="mailto:galij899@yandex.ru">galij899@yandex.ru</a></p>
+            <p class="fw-light text-center text-light bottom-space">Python-программист. Учусь в НИУ ВШЭ СПб. Backend-разработка на Django, Data Science/ML</p>
+            <p class="fw-lighter text-center text-light m-0 "><a href="tel: +79119326577" class="white-link">+7 (911) 932-65-77</a></p>
+            <p class="fw-lighter text-center text-light"><a href="mailto:galij899@yandex.ru" class="white-link">galij899@yandex.ru</a></p>
             <div class="social">
-                <a href="https://vk.com/galij899"><i class="fab fa-vk"></i></a>
-                <a href="https://github.com/galij899"><i class="fab fa-github"></i></a>
-                <a href="https://telegram.me/galij899"><i class="fab fa-telegram"></i></a>
+                <a href="https://vk.com/galij899" class="my-color"><i class="fab fa-vk"></i></a>
+                <a href="https://github.com/galij899" class="my-color"><i class="fab fa-github"></i></a>
+                <a href="https://telegram.me/galij899" class="my-color"><i class="fab fa-telegram"></i></a>
             </div>
             <p class="text-center text-secondary"><small>made with Django and Bootstrap</small></p>
         </div>

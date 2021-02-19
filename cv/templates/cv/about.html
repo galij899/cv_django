@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}Обо мне{% endblock %}
+{% block title %}Олег Галичкин{% endblock %}
 
 {% block content %}
-    <div class="container-lg">
+    <div class="container-lg pt-3">
 
         <h2>Основная информация</h2>
 
@@ -24,7 +24,7 @@
         <h2>Образование</h2>
         <div class="row py-2">
             <div class="col-sm-6 p-2">
-                <div class="card border-secondary">
+                <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title">Major</h5>
                         <p class="card-text">НИУ ВШЭ СПб, Экономика, 2018 - н.в.</p>
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="col-sm-6 p-2">
-                <div class="card border-secondary">
+                <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title">Minor</h5>
                         <p class="card-text">НИУ ВШЭ СПб, Computer Science, 2019 - н.в.</p>
@@ -104,7 +104,7 @@
                         <p class="card-text"><small class="text-muted">{{ proj.stack }}</small>
                         {% if proj.hasLink %}
                             <a href="{{ proj.link }}">
-                                <span class="badge badge-dark badge-pill float-right">Ссылка</span>
+                                <button type="button" class="btn btn-outline-dark btn-sm float-right">Ссылка</button>
                             </a>
                         {% endif %}
                         </p>
