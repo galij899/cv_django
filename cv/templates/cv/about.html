@@ -1,33 +1,56 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Олег Галичкин{% endblock %}
+{% block title %}{% trans "Галичкин Олег" %}{% endblock %}
 
 {% block content %}
+
+    <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+        <input name="next" type="hidden" value="{{ redirect_to }}"/>
+        <select name="language">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                        selected="selected"{% endif %}>
+                    {{ language.name_local }} ({{ language.code }})
+                </option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Go"/>
+    </form>
     <div class="container-lg pt-3">
 
-        <h2>Основная информация</h2>
+        <h2>{% trans 'Основная информация' %}</h2>
 
         <div class="row pt-2 pb-3">
             <div class="col-sm-12">
                 <ul class="list-group">
-                    <li class="list-group-item"><span class="font-weight-bold">Проживание:</span> Санкт-Петербург, м.
-                        Лесная
+                    <li class="list-group-item">
+                        <span class="font-weight-bold">{% trans "Проживание" %}:</span>
+                        {% trans "Санкт-Петербург, м.Лесная" %}
                     </li>
-                    <li class="list-group-item"><span class="font-weight-bold">Гражданство:</span> Россия</li>
-                    <li class="list-group-item"><span class="font-weight-bold">Занятость:</span> Стажировка, частичная
-                        занятость (20 часов в неделю)
+                    <li class="list-group-item">
+                        <span class="font-weight-bold">{% trans "Гражданство" %}:</span>
+                        {% trans "Россия" %}
                     </li>
-                    <li class="list-group-item"><span class="font-weight-bold">График работы:</span> Удаленная работа,
-                        гибкий график
+                    <li class="list-group-item">
+                        <span class="font-weight-bold">{% trans "Занятость" %}:</span>
+                        {% trans "Стажировка, частичная занятость (20 часов в неделю)" %}
                     </li>
-                    <li class="list-group-item">Не готов к переезду, не готов к командировкам</li>
+                    <li class="list-group-item">
+                        <span class="font-weight-bold">{% trans "График работы" %}:</span>
+                        {% trans "Удаленная работа, гибкий график" %}
+                    </li>
+                    <li class="list-group-item">{% trans "Не готов к переезду, не готов к командировкам" %}</li>
                 </ul>
             </div>
         </div>
 
         <hr>
 
-        <h2>Образование</h2>
+        <h2>{% trans 'Образование' %}</h2>
         <div class="row py-2">
             <div class="col-sm-6 p-2">
                 <div class="card h-100">
@@ -49,22 +72,22 @@
 
         <hr>
 
-        <h2>Навыки</h2>
+        <h2>{% trans "Навыки" %}</h2>
 
         <div class="row pt-2">
             <div class="col-sm-6 p-2">
                 <h5 class="pt-2">Python</h5>
                 <ul class="list-group">
                     {% for skill in skills %}
-                            <li class="list-group-item">
-                                <div class="w-100 justify-content-between">
-                                    {{ skill.name }}
-                                    <span class="badge badge-dark badge-pill float-right">{{ skill.level }}/10</span>
-                                </div>
-                                {% if skill.descr != "-" %}
-                                    <small>{{ skill.descr }}</small>
-                                {% endif %}
-                            </li>
+                        <li class="list-group-item">
+                            <div class="w-100 justify-content-between">
+                                {{ skill.name }}
+                                <span class="badge badge-dark badge-pill float-right">{{ skill.level }}/10</span>
+                            </div>
+                            {% if skill.descr != "-" %}
+                                <small>{{ skill.descr }}</small>
+                            {% endif %}
+                        </li>
                     {% endfor %}
                 </ul>
             </div>
@@ -103,7 +126,7 @@
 
         <hr>
 
-        <h2>Проекты и достижения</h2>
+        <h2>{% trans "Проекты и достижения" %}</h2>
 
         <div class="row py-2">
             {% for proj in projects %}
@@ -145,13 +168,14 @@
 
         <hr>
 
-        <h2>Языки</h2>
+        <h2>{% trans "Языки" %}</h2>
 
         <div class="row pt-2 pb-3">
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">
-                        Английский, C1-C2, свободно разговариваю
+                        {% trans "Английский, C1-C2, свободно разговариваю" %}
+
                     </div>
                 </div>
             </div>

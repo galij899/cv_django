@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-30 23:39+0300\n"
+"PO-Revision-Date: 2021-04-30 23:40+0230\n"
+"Last-Translator: b'  <galij899@yandex.ru>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Translated-Using: django-rosetta 0.9.6\n"
+
+#: cv/templates/cv/about.html:4 templates/base.html:24
+msgid "Галичкин Олег"
+msgstr "Oleg Galichkin"
+
+#: cv/templates/cv/about.html:25
+msgid "Основная информация"
+msgstr "Main info"
+
+#: cv/templates/cv/about.html:31
+msgid "Проживание"
+msgstr "Residency"
+
+#: cv/templates/cv/about.html:32
+msgid "Санкт-Петербург, м.Лесная"
+msgstr "Saint Petersburg, Lesnaya metro station"
+
+#: cv/templates/cv/about.html:35
+msgid "Гражданство"
+msgstr "Citizenship"
+
+#: cv/templates/cv/about.html:36
+msgid "Россия"
+msgstr "Russian Federation"
+
+#: cv/templates/cv/about.html:39
+msgid "Занятость"
+msgstr "Desired occupancy"
+
+#: cv/templates/cv/about.html:40
+msgid "Стажировка, частичная занятость (20 часов в неделю)"
+msgstr "Internship, part-time (20 hours per week)"
+
+#: cv/templates/cv/about.html:43
+msgid "График работы"
+msgstr "Work schedule"
+
+#: cv/templates/cv/about.html:44
+msgid "Удаленная работа, гибкий график"
+msgstr "Remote work, flexible working hours"
+
+#: cv/templates/cv/about.html:46
+msgid "Не готов к переезду, не готов к командировкам"
+msgstr "Not ready to move, not ready for business trips"
+
+#: cv/templates/cv/about.html:53
+msgid "Образование"
+msgstr "Education"
+
+#: cv/templates/cv/about.html:75
+msgid "Навыки"
+msgstr "Skills"
+
+#: cv/templates/cv/about.html:129
+msgid "Проекты и достижения"
+msgstr "Projects and achievements"
+
+#: cv/templates/cv/about.html:171
+msgid "Языки"
+msgstr "Languages"
+
+#: cv/templates/cv/about.html:177
+msgid "Английский, C1-C2, свободно разговариваю"
+msgstr "English, Advanced (C1-C2), speaking fluently"
+
+#: cv_django/settings.py:121
+msgid "Русский"
+msgstr "Russian"
+
+#: cv_django/settings.py:122
+msgid "Английский"
+msgstr "English"
+
+#: templates/base.html:25
+msgid "20 лет"
+msgstr "20 y.o."
+
+#: templates/base.html:26
+msgid ""
+"Python-программист. 3 курс НИУ ВШЭ СПб. Backend-разработка на Django, Data "
+"Science/ML"
+msgstr ""
+"Python-developer. HSE SPb, Junior year. Backend-development on Django, Data "
+"Science/ML"
+
+#~ msgid "Олег Галичкин"
+#~ msgstr "Oleg Galichkin"
+
+#~ msgid "Title"
+#~ msgstr "англ"
