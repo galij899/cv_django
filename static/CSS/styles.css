@@ -38,3 +38,10 @@ nav {
 .white-link, .white-link:hover, .white-link:active {
     color: white;
 }
+
+.language-button {
+    width: 45px;
+    margin-bottom: -25px;
+    margin-top: -9px;
+    align-self: flex-end;
+}

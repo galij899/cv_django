@@ -7,8 +7,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/f2af3919b4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static "/CSS/styles.css" %}">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static "/favicon/apple-touch-icon.png" %}">
@@ -20,12 +23,37 @@
 <div class="container-fluid" id="about-container">
     <div class="row">
         <div class="col-sm-3 bg-dark sidebar pt-4">
-            <img class="rounded-circle mx-auto d-block img-fluid avatar" src="{% static "avatar.jpg" %}" id="avatar" alt="Мое фото">
+
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
+                <ul class="nav navbar-nav navbar-right language menu">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        {% if language.code != LANGUAGE_CODE %}
+                                <button type="submit"
+                                        name="language"
+                                        value="{{ language.code }}"
+                                        class="btn btn-secondary language-button {% if language.code == LANGUAGE_CODE %}selected{% endif %}">
+                                    {{ language.code }}
+                                </button>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </form>
+
+
+            <img class="rounded-circle mx-auto d-block img-fluid avatar" src="{% static "avatar.jpg" %}" id="avatar"
+                 alt="Мое фото">
             <p class="h3 text-center text-light">{% trans "Галичкин Олег" %}</p>
             <p class="h6 text-center text-light bottom-space">{% trans "20 лет" %}</p>
             <p class="fw-light text-center text-light bottom-space">{% trans "Python-программист. 3 курс НИУ ВШЭ СПб. Backend-разработка на Django, Data Science/ML" %}</p>
-            <p class="fw-lighter text-center text-light m-0 "><a href="tel: +79119326577" class="white-link">+7 (911) 932-65-77</a></p>
-            <p class="fw-lighter text-center text-light"><a href="mailto:galij899@yandex.ru" class="white-link">galij899@yandex.ru</a></p>
+            <p class="fw-lighter text-center text-light m-0 "><a href="tel: +79119326577" class="white-link">+7 (911)
+                932-65-77</a></p>
+            <p class="fw-lighter text-center text-light"><a href="mailto:galij899@yandex.ru" class="white-link">galij899@yandex.ru</a>
+            </p>
             <div class="social">
                 <a href="https://vk.com/galij899" class="my-color"><i class="fab fa-vk"></i></a>
                 <a href="https://github.com/galij899" class="my-color"><i class="fab fa-github"></i></a>
@@ -36,7 +64,7 @@
         <div class="col-sm-9 pt-3">
             {% block content %}
             {% endblock %}
-       </div>
+        </div>
     </div>
 </div>
 </body>
