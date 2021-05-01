@@ -9,6 +9,7 @@ nav {
 .avatar {
     margin: 10px;
     border-radius: 50%;
+    height: 33vh;
 }
 
 .social {
@@ -41,7 +42,21 @@ nav {
 
 .language-button {
     width: 45px;
+    height: 45px;
     margin-bottom: -25px;
     margin-top: -9px;
     align-self: flex-end;
+    border-radius: 50%;
+    border-color: white;
+    text-align: center;
+}
+
+.code {
+    font-family: 'Source Code Pro', monospace;
+    display: inline;
+    white-space: nowrap;
+}
+
+.stack {
+    flex-grow: 0.7;
 }
