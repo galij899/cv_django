@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import Skill, Project, SoftSkill
-from django.utils.translation import get_language
 
 # Create your views here.
 
