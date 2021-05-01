@@ -1,7 +1,7 @@
-{% extends "base.html" %}
+{% extends "cv/base.html" %}
 {% load i18n %}
 
-{% block title %}{% trans "Галичкин Олег" %}{% endblock %}
+{% block title %}{% trans "CV | Галичкин Олег" %}{% endblock %}
 
 {% block content %}
 
@@ -40,7 +40,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title">Major</h5>
-                        <p class="card-text">НИУ ВШЭ СПб, Экономика, 2018 - н.в.</p>
+                        <p class="card-text">{% trans 'НИУ ВШЭ СПб, Экономика, 2018 - н.в.' %}</p>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title">Minor</h5>
-                        <p class="card-text">НИУ ВШЭ СПб, Computer Science, 2019 - н.в.</p>
+                        <p class="card-text">{% trans 'НИУ ВШЭ СПб, Computer Science, 2019 - н.в.' %}</p>
                     </div>
                 </div>
             </div>
@@ -68,8 +68,14 @@
                         {% for skill in backend %}
                             <span class="code" data-toggle="tooltip" data-placement="bottom" title="
 
-                                    {% if LANGUAGE_CODE == "en" %}{{ skill.descr_en }}{% else %}{{ skill.descr }}{% endif %}">
-                        {{ skill.name }}</span>,&ensp;
+                             {% if LANGUAGE_CODE == "en" %}{{ skill.descr_en }}{% else %}{{ skill.descr }}{% endif %}">
+
+                            {% if forloop.last %}
+                                {{ skill.name }}</span>
+                            {% else %}
+                                {{ skill.name }}</span>,&ensp;
+                            {% endif %}
+
                         {% endfor %}
                     </div>
                 </div>
@@ -79,9 +85,12 @@
                     <div class="card-body">
                         {% for skill in frontend %}
                             <span class="code" data-toggle="tooltip" data-placement="bottom" title="
-
-                                    {% if LANGUAGE_CODE == "en" %}{{ skill.descr_en }}{% else %}{{ skill.descr }}{% endif %}">
-                        {{ skill.name }}</span>,&ensp;
+                            {% if LANGUAGE_CODE == "en" %}{{ skill.descr_en }}{% else %}{{ skill.descr }}{% endif %}">
+                                {% if forloop.last %}
+                                    {{ skill.name }}</span>
+                                {% else %}
+                                    {{ skill.name }}</span>,&ensp;
+                                {% endif %}
                         {% endfor %}
                     </div>
                 </div>
@@ -94,19 +103,27 @@
                         {% for skill in ds %}
                             <span class="code" data-toggle="tooltip" data-placement="bottom" title="
 
-                                    {% if LANGUAGE_CODE == "en" %}{{ skill.descr_en }}{% else %}{{ skill.descr }}{% endif %}">
-                        {{ skill.name }}</span>,&ensp;
+                            {% if LANGUAGE_CODE == "en" %}{{ skill.descr_en }}{% else %}{{ skill.descr }}{% endif %}">
+                            {% if forloop.last %}
+                                {{ skill.name }}</span>
+                            {% else %}
+                                {{ skill.name }}</span>,&ensp;
+                            {% endif %}
                         {% endfor %}
                     </div>
                 </div>
-                <h5 class="pt-2 px-2">Общее</h5>
+                <h5 class="pt-2 px-2">{% trans 'Другое' %}</h5>
                 <div class="card">
                     <div class="card-body">
                         {% for skill in general %}
                             <span class="code" data-toggle="tooltip" data-placement="bottom" title="
 
-                                    {% if LANGUAGE_CODE == "en" %}{{ skill.descr_en }}{% else %}{{ skill.descr }}{% endif %}">
-                        {{ skill.name }}</span>,&ensp;
+                            {% if LANGUAGE_CODE == "en" %}{{ skill.descr_en }}{% else %}{{ skill.descr }}{% endif %}">
+                            {% if forloop.last %}
+                                {{ skill.name }}</span>
+                            {% else %}
+                                {{ skill.name }}</span>,&ensp;
+                            {% endif %}
                         {% endfor %}
                     </div>
                 </div>
@@ -122,13 +139,19 @@
                 <div class="col-sm-6 p-2">
                     <div class="card h-100 d-flex">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">{{ proj.name }}</h5>
-                            <p class="card-text">{{ proj.descr }}</p>
+                            {% if LANGUAGE_CODE == "en" %}
+                                <h5 class="card-title">{{ proj.name_en }}</h5>
+                                <p class="card-text">{{ proj.descr_en }}</p>
+                            {% else %}
+                                <h5 class="card-title">{{ proj.name }}</h5>
+                                <p class="card-text">{{ proj.descr }}</p>
+                            {% endif %}
                         </div>
                         <div class="card-footer">
                             <p class="card-text"><small class="text-muted">{{ proj.stack }}</small></p>
                             {% if proj.hasLink %}
-                                <a href="{{ proj.link }}" class="btn btn-outline-dark btn-sm align-self-end">Посмотреть</a>
+                                <a href="{{ proj.link }}"
+                                   class="btn btn-outline-dark btn-sm align-self-end">{% trans 'Посмотреть' %}</a>
                             {% endif %}
                         </div>
                     </div>
@@ -145,8 +168,13 @@
                 <div class="col-sm-6 p-2">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">{{ soft.name }}</h5>
-                            <p class="card-text">{{ soft.descr }}</p>
+                            {% if LANGUAGE_CODE == "en" %}
+                                <h5 class="card-title">{{ soft.name_en }}</h5>
+                                <p class="card-text">{{ soft.descr_en }}</p>
+                            {% else %}
+                                <h5 class="card-title">{{ soft.name }}</h5>
+                                <p class="card-text">{{ soft.descr }}</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -162,7 +190,6 @@
                 <div class="card">
                     <div class="card-body">
                         {% trans "Английский, C1-C2, свободно разговариваю" %}
-
                     </div>
                 </div>
             </div>
