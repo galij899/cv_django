@@ -1,1 +1,1 @@
-web: gunicorn cv_django.wsgi --log-file -
+web: gunicorn cv_django.wsgi

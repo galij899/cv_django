@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Skill, Project, SoftSkill
 
+
 # Create your views here.
 
 def about(request):
@@ -17,6 +18,3 @@ def about(request):
                                              'general': general,
                                              'softs': softs,
                                              'projects': projects})
-
-def skills(request):
-    return render(request, 'cv/skills.html')
