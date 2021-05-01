@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-30 23:39+0300\n"
-"PO-Revision-Date: 2021-05-01 00:56+0230\n"
+"POT-Creation-Date: 2021-05-01 15:46+0300\n"
+"PO-Revision-Date: 2021-05-01 12:50+0000\n"
 "Last-Translator: b'  <galij899@yandex.ru>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,69 +18,106 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Translated-Using: django-rosetta 0.9.6\n"
 
-#: cv/templates/cv/about.html:4 templates/base.html:24
-msgid "Галичкин Олег"
-msgstr "Oleg Galichkin"
+#: cv/templates/cv/about.html:4
+#| msgid "Галичкин Олег"
+msgid "CV | Галичкин Олег"
+msgstr "CV | Oleg Galichkin"
 
-#: cv/templates/cv/about.html:25
+#: cv/templates/cv/about.html:9
 msgid "Основная информация"
 msgstr "Main information"
 
-#: cv/templates/cv/about.html:31
+#: cv/templates/cv/about.html:15
 msgid "Проживание"
 msgstr "Residency"
 
-#: cv/templates/cv/about.html:32
+#: cv/templates/cv/about.html:16
 msgid "Санкт-Петербург, м.Лесная"
 msgstr "Saint Petersburg, Lesnaya metro station"
 
-#: cv/templates/cv/about.html:35
+#: cv/templates/cv/about.html:19
 msgid "Гражданство"
 msgstr "Citizenship"
 
-#: cv/templates/cv/about.html:36
+#: cv/templates/cv/about.html:20
 msgid "Россия"
 msgstr "Russian Federation"
 
-#: cv/templates/cv/about.html:39
+#: cv/templates/cv/about.html:23
 msgid "Занятость"
 msgstr "Desired occupancy"
 
-#: cv/templates/cv/about.html:40
+#: cv/templates/cv/about.html:24
 msgid "Стажировка, частичная занятость (20 часов в неделю)"
 msgstr "Internship, part-time (20 hours per week)"
 
-#: cv/templates/cv/about.html:43
+#: cv/templates/cv/about.html:27
 msgid "График работы"
 msgstr "Work schedule"
 
-#: cv/templates/cv/about.html:44
+#: cv/templates/cv/about.html:28
 msgid "Удаленная работа, гибкий график"
 msgstr "Remote work, flexible working hours"
 
-#: cv/templates/cv/about.html:46
+#: cv/templates/cv/about.html:30
 msgid "Не готов к переезду, не готов к командировкам"
 msgstr "Not ready to move, not ready for business trips"
 
-#: cv/templates/cv/about.html:53
+#: cv/templates/cv/about.html:37
 msgid "Образование"
 msgstr "Education"
 
-#: cv/templates/cv/about.html:75
+#: cv/templates/cv/about.html:43
+msgid "НИУ ВШЭ СПб, Экономика, 2018 - н.в."
+msgstr "HSE University, Economics, 2018 - now"
+
+#: cv/templates/cv/about.html:51
+msgid "НИУ ВШЭ СПб, Computer Science, 2019 - н.в."
+msgstr "HSE University, Computer Science, 2019 - now"
+
+#: cv/templates/cv/about.html:59
 msgid "Навыки"
 msgstr "Skills"
 
-#: cv/templates/cv/about.html:129
+#: cv/templates/cv/about.html:60
+msgid "Кликните на навык, чтобы увидеть подробности"
+msgstr "Click on skill to see more"
+
+#: cv/templates/cv/about.html:115
+msgid "Другое"
+msgstr "Other"
+
+#: cv/templates/cv/about.html:135
 msgid "Проекты и достижения"
 msgstr "Projects and achievements"
 
-#: cv/templates/cv/about.html:171
+#: cv/templates/cv/about.html:154
+msgid "Посмотреть"
+msgstr "Take a look"
+
+#: cv/templates/cv/about.html:186
 msgid "Языки"
 msgstr "Languages"
 
-#: cv/templates/cv/about.html:177
+#: cv/templates/cv/about.html:192
 msgid "Английский, C1-C2, свободно разговариваю"
 msgstr "English, Advanced (C1-C2), speaking fluently"
+
+#: cv/templates/cv/base.html:66
+msgid "Галичкин Олег"
+msgstr "Oleg Galichkin"
+
+#: cv/templates/cv/base.html:67
+msgid "20 лет"
+msgstr "20 y.o."
+
+#: cv/templates/cv/base.html:68
+msgid ""
+"Python-программист. 3 курс НИУ ВШЭ СПб. Backend-разработка на Django, Data "
+"Science/ML"
+msgstr ""
+"Python-developer. HSE SPb, Junior year. Backend-development on Django, Data "
+"Science/ML"
 
 #: cv_django/settings.py:121
 msgid "Русский"
@@ -89,18 +126,6 @@ msgstr "Russian"
 #: cv_django/settings.py:122
 msgid "Английский"
 msgstr "English"
-
-#: templates/base.html:25
-msgid "20 лет"
-msgstr "20 y.o."
-
-#: templates/base.html:26
-msgid ""
-"Python-программист. 3 курс НИУ ВШЭ СПб. Backend-разработка на Django, Data "
-"Science/ML"
-msgstr ""
-"Python-developer. HSE SPb, Junior year. Backend-development on Django, Data "
-"Science/ML"
 
 #~ msgid "Олег Галичкин"
 #~ msgstr "Oleg Galichkin"

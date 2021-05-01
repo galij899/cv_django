@@ -9,8 +9,8 @@ def about(request):
     frontend = Skill.objects.filter(type="frontend").order_by("id")
     ds = Skill.objects.filter(type="ds").order_by("id")
     general = Skill.objects.filter(type="General").order_by("id")
-    softs = SoftSkill.objects.all()
-    projects = Project.objects.all()
+    softs = SoftSkill.objects.all().order_by("id")
+    projects = Project.objects.all().order_by("id")
 
     return render(request, 'cv/about.html', {'backend': backend,
                                              'frontend': frontend,
