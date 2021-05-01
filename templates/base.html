@@ -23,7 +23,6 @@
 <div class="container-fluid" id="about-container">
     <div class="row">
         <div class="col-sm-3 bg-dark sidebar pt-4">
-
             <form action="{% url 'set_language' %}" method="post">
                 {% csrf_token %}
                 <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
@@ -33,12 +32,12 @@
                     {% get_language_info_list for LANGUAGES as languages %}
                     {% for language in languages %}
                         {% if language.code != LANGUAGE_CODE %}
-                                <button type="submit"
-                                        name="language"
-                                        value="{{ language.code }}"
-                                        class="btn btn-secondary language-button {% if language.code == LANGUAGE_CODE %}selected{% endif %}">
-                                    {{ language.code }}
-                                </button>
+                            <button type="submit"
+                                    name="language"
+                                    value="{{ language.code }}"
+                                    class="btn white-link language-button {% if language.code == LANGUAGE_CODE %}selected{% endif %}">
+                                {{ language.code|upper }}
+                            </button>
                         {% endif %}
                     {% endfor %}
                 </ul>
@@ -58,6 +57,7 @@
                 <a href="https://vk.com/galij899" class="my-color"><i class="fab fa-vk"></i></a>
                 <a href="https://github.com/galij899" class="my-color"><i class="fab fa-github"></i></a>
                 <a href="https://telegram.me/galij899" class="my-color"><i class="fab fa-telegram"></i></a>
+                <a href="" class="my-color"><i class="fab fa-linkedin"></i></a>
             </div>
             <p class="text-center text-secondary"><small>made with Django and Bootstrap</small></p>
         </div>

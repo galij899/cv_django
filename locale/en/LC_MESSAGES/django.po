@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-30 23:39+0300\n"
-"PO-Revision-Date: 2021-04-30 23:40+0230\n"
+"PO-Revision-Date: 2021-05-01 00:56+0230\n"
 "Last-Translator: b'  <galij899@yandex.ru>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -24,7 +24,7 @@ msgstr "Oleg Galichkin"
 
 #: cv/templates/cv/about.html:25
 msgid "Основная информация"
-msgstr "Main info"
+msgstr "Main information"
 
 #: cv/templates/cv/about.html:31
 msgid "Проживание"

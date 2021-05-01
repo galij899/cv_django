@@ -6,7 +6,6 @@
 {% block content %}
 
     <div class="container-lg pt-3">
-
         <h2>{% trans 'Основная информация' %}</h2>
 
         <div class="row pt-2 pb-3">
@@ -60,16 +59,35 @@
         <h2>{% trans "Навыки" %}</h2>
 
         <div class="row pt-2">
+
             <div class="col-sm-6 p-2">
-                <h5 class="pt-2">Python</h5>
+                <h5 class="pt-2 text-center">Backend</h5>
                 <ul class="list-group">
-                    {% for skill in skills %}
+                    {% for skill in backend %}
                         <li class="list-group-item">
                             <div class="w-100 justify-content-between">
                                 {{ skill.name }}
                                 <span class="badge badge-dark badge-pill float-right">{{ skill.level }}/10</span>
                             </div>
-                            {% if skill.descr != "-" %}
+                            {% if LANGUAGE_CODE == "en" %}
+                                <small>{{ skill.descr_en }}</small>
+                            {% else %}
+                                <small>{{ skill.descr }}</small>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+                <h5 class="pt-2 text-center">Frontend</h5>
+                <ul class="list-group">
+                    {% for skill in frontend %}
+                        <li class="list-group-item">
+                            <div class="w-100 justify-content-between">
+                                {{ skill.name }}
+                                <span class="badge badge-dark badge-pill float-right">{{ skill.level }}/10</span>
+                            </div>
+                            {% if LANGUAGE_CODE == "en" %}
+                                <small>{{ skill.descr_en }}</small>
+                            {% else %}
                                 <small>{{ skill.descr }}</small>
                             {% endif %}
                         </li>
@@ -78,21 +96,23 @@
             </div>
 
             <div class="col-sm-6 p-2">
-                <h5 class="pt-2">Web</h5>
+                <h5 class="pt-2 text-center">Data Science/ML/Data Parsing</h5>
                 <ul class="list-group">
-                    {% for web_skill in web %}
+                    {% for skill in ds %}
                         <li class="list-group-item">
                             <div class="w-100 justify-content-between">
-                                {{ web_skill.name }}
-                                <span class="badge badge-dark badge-pill float-right">{{ web_skill.level }}/10</span>
+                                {{ skill.name }}
+                                <span class="badge badge-dark badge-pill float-right">{{ skill.level }}/10</span>
                             </div>
-                            {% if web_skill.descr != "-" %}
-                                <small>{{ web_skill.descr }}</small>
+                            {% if LANGUAGE_CODE == "en" %}
+                                <small>{{ skill.descr_en }}</small>
+                            {% else %}
+                                <small>{{ skill.descr }}</small>
                             {% endif %}
                         </li>
                     {% endfor %}
                 </ul>
-                <h5 class="pt-2">Общее</h5>
+                <h5 class="pt-2 text-center">Общее</h5>
                 <ul class="list-group">
                     {% for gen in general %}
                         <li class="list-group-item">
@@ -100,7 +120,9 @@
                                 {{ gen.name }}
                                 <span class="badge badge-dark badge-pill float-right">{{ gen.level }}/10</span>
                             </div>
-                            {% if gen.descr != "-" %}
+                            {% if LANGUAGE_CODE == "en" %}
+                                <small>{{ gen.descr_en }}</small>
+                            {% else %}
                                 <small>{{ gen.descr }}</small>
                             {% endif %}
                         </li>
