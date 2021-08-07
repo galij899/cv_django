@@ -34,6 +34,24 @@
 
         <hr>
 
+        <h2>{% trans "Опыт работы" %}</h2>
+
+        <div class="row pt-2 pb-3">
+            {% for work in works %}
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ work.name }}</h5>
+                            <h6 class="card-title">{{ work.time }}</h6>
+                            {{ work.descr }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
         <h2>{% trans 'Образование' %}</h2>
         <div class="row py-2">
             <div class="col-sm-6 p-2">

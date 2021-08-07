@@ -23,11 +23,23 @@ class Project(models.Model):
     def __str__(self):
         return self.name
 
+
 class SoftSkill(models.Model):
     name = models.CharField(max_length=100)
     descr = models.CharField(max_length=300)
     name_en = models.CharField(max_length=100)
     descr_en = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.name
+
+
+class WorkExperience(models.Model):
+    name = models.CharField(max_length=100)
+    descr = models.CharField(max_length=300)
+    name_en = models.CharField(max_length=100)
+    descr_en = models.CharField(max_length=300)
+    time = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
