@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Skill, Project, SoftSkill
+from .models import Skill, Project, SoftSkill, WorkExperience
 
 
 # Create your views here.
@@ -11,10 +11,12 @@ def about(request):
     general = Skill.objects.filter(type="General").order_by("id")
     softs = SoftSkill.objects.all().order_by("id")
     projects = Project.objects.all().order_by("id")
+    works = WorkExperience.objects.all().order_by("id")
 
     return render(request, 'cv/about.html', {'backend': backend,
                                              'frontend': frontend,
                                              'ds': ds,
                                              'general': general,
                                              'softs': softs,
-                                             'projects': projects})
+                                             'projects': projects,
+                                             'works': works})
