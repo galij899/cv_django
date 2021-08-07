@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-01 15:46+0300\n"
-"PO-Revision-Date: 2021-05-01 12:50+0000\n"
+"POT-Creation-Date: 2021-08-07 20:09+0300\n"
+"PO-Revision-Date: 2021-08-07 17:09+0000\n"
 "Last-Translator: b'  <galij899@yandex.ru>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,7 +19,6 @@ msgstr ""
 "X-Translated-Using: django-rosetta 0.9.6\n"
 
 #: cv/templates/cv/about.html:4
-#| msgid "Галичкин Олег"
 msgid "CV | Галичкин Олег"
 msgstr "CV | Oleg Galichkin"
 
@@ -64,42 +63,47 @@ msgid "Не готов к переезду, не готов к командир�
 msgstr "Not ready to move, not ready for business trips"
 
 #: cv/templates/cv/about.html:37
+#| msgid "График работы"
+msgid "Опыт работы"
+msgstr "Work experience"
+
+#: cv/templates/cv/about.html:59
 msgid "Образование"
 msgstr "Education"
 
-#: cv/templates/cv/about.html:43
+#: cv/templates/cv/about.html:65
 msgid "НИУ ВШЭ СПб, Экономика, 2018 - н.в."
 msgstr "HSE University, Economics, 2018 - now"
 
-#: cv/templates/cv/about.html:51
+#: cv/templates/cv/about.html:73
 msgid "НИУ ВШЭ СПб, Computer Science, 2019 - н.в."
 msgstr "HSE University, Computer Science, 2019 - now"
 
-#: cv/templates/cv/about.html:59
+#: cv/templates/cv/about.html:81
 msgid "Навыки"
 msgstr "Skills"
 
-#: cv/templates/cv/about.html:60
+#: cv/templates/cv/about.html:82
 msgid "Кликните на навык, чтобы увидеть подробности"
 msgstr "Click on skill to see more"
 
-#: cv/templates/cv/about.html:115
+#: cv/templates/cv/about.html:136
 msgid "Другое"
 msgstr "Other"
 
-#: cv/templates/cv/about.html:135
+#: cv/templates/cv/about.html:156
 msgid "Проекты и достижения"
 msgstr "Projects and achievements"
 
-#: cv/templates/cv/about.html:154
+#: cv/templates/cv/about.html:175
 msgid "Посмотреть"
 msgstr "Take a look"
 
-#: cv/templates/cv/about.html:186
+#: cv/templates/cv/about.html:207
 msgid "Языки"
 msgstr "Languages"
 
-#: cv/templates/cv/about.html:192
+#: cv/templates/cv/about.html:213
 msgid "Английский, C1-C2, свободно разговариваю"
 msgstr "English, Advanced (C1-C2), speaking fluently"
 
@@ -119,11 +123,11 @@ msgstr ""
 "Python-developer. HSE SPb, Junior year. Backend-development on Django, Data "
 "Science/ML"
 
-#: cv_django/settings.py:121
+#: cv_django/settings.py:116
 msgid "Русский"
 msgstr "Russian"
 
-#: cv_django/settings.py:122
+#: cv_django/settings.py:117
 msgid "Английский"
 msgstr "English"
 

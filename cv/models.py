@@ -40,6 +40,7 @@ class WorkExperience(models.Model):
     name_en = models.CharField(max_length=100)
     descr_en = models.CharField(max_length=300)
     time = models.CharField(max_length=100)
+    time_en = models.CharField(max_length=100, default="-")
 
     def __str__(self):
         return self.name
