@@ -1,8 +1,7 @@
 from django.shortcuts import render
+
 from .models import Skill, Project, SoftSkill, WorkExperience
 
-
-# Create your views here.
 
 def about(request):
     backend = Skill.objects.filter(type="backend").order_by("id")
