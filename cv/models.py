@@ -8,8 +8,15 @@ class Skill(models.Model):
     """
     Languages, frameworks, libraries and tools
     """
+    TYPE_CHOICES = [
+        ('backend', 'backend'),
+        ('frontend', 'frontend'),
+        ('ds', 'ds'),
+        ('General', 'General')
+    ]
+
     name = models.CharField(max_length=SHORT_FIELD)
-    type = models.CharField(max_length=SHORT_FIELD)
+    type = models.CharField(max_length=SHORT_FIELD, choices=TYPE_CHOICES)
     descr = models.CharField(max_length=SHORT_FIELD)
     descr_en = models.CharField(max_length=SHORT_FIELD)
 
