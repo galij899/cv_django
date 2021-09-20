@@ -1,46 +1,62 @@
 from django.db import models
 
+SHORT_FIELD = 100
+DESCRIPTION_LENGTH = 400
+
 
 class Skill(models.Model):
-    name = models.CharField(max_length=100)
-    type = models.CharField(max_length=100)
-    descr = models.CharField(max_length=50)
-    descr_en = models.CharField(max_length=50)
+    """
+    Languages, frameworks, libraries and tools
+    """
+    name = models.CharField(max_length=SHORT_FIELD)
+    type = models.CharField(max_length=SHORT_FIELD)
+    descr = models.CharField(max_length=SHORT_FIELD)
+    descr_en = models.CharField(max_length=SHORT_FIELD)
 
     def __str__(self):
         return self.name
 
 
 class Project(models.Model):
-    name = models.CharField(max_length=100)
-    descr = models.CharField(max_length=300)
-    name_en = models.CharField(max_length=100)
-    descr_en = models.CharField(max_length=300)
-    stack = models.CharField(max_length=150)
+    """
+    Free time projects
+    """
+    name = models.CharField(max_length=SHORT_FIELD)
+    descr = models.CharField(max_length=DESCRIPTION_LENGTH)
+    name_en = models.CharField(max_length=SHORT_FIELD)
+    descr_en = models.CharField(max_length=DESCRIPTION_LENGTH)
+    stack = models.CharField(max_length=DESCRIPTION_LENGTH)
     hasLink = models.BooleanField(default=True)
-    link = models.CharField(max_length=100, blank=True, null=True)
+    link = models.CharField(max_length=SHORT_FIELD, blank=True, null=True)
 
     def __str__(self):
         return self.name
 
 
 class SoftSkill(models.Model):
-    name = models.CharField(max_length=100)
-    descr = models.CharField(max_length=300)
-    name_en = models.CharField(max_length=100)
-    descr_en = models.CharField(max_length=300)
+    """
+    Soft skills
+    """
+    name = models.CharField(max_length=SHORT_FIELD)
+    descr = models.CharField(max_length=DESCRIPTION_LENGTH)
+    name_en = models.CharField(max_length=SHORT_FIELD)
+    descr_en = models.CharField(max_length=DESCRIPTION_LENGTH)
 
     def __str__(self):
         return self.name
 
 
 class WorkExperience(models.Model):
-    name = models.CharField(max_length=100)
-    descr = models.CharField(max_length=300)
-    name_en = models.CharField(max_length=100)
-    descr_en = models.CharField(max_length=300)
-    time = models.CharField(max_length=100)
-    time_en = models.CharField(max_length=100, default="-")
+    """
+    Places of works, positions in them and experiences gained
+    """
+    name = models.CharField(max_length=SHORT_FIELD)
+    descr = models.CharField(max_length=DESCRIPTION_LENGTH)
+    name_en = models.CharField(max_length=SHORT_FIELD)
+    descr_en = models.CharField(max_length=DESCRIPTION_LENGTH)
+    stack = models.CharField(max_length=DESCRIPTION_LENGTH, null=True)
+    time = models.CharField(max_length=SHORT_FIELD)
+    time_en = models.CharField(max_length=SHORT_FIELD, null=True)
 
     def __str__(self):
         return self.name

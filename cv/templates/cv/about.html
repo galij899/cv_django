@@ -21,13 +21,13 @@
                     </li>
                     <li class="list-group-item">
                         <span class="font-weight-bold">{% trans "Занятость" %}:</span>
-                        {% trans "Стажировка, частичная занятость (20 часов в неделю)" %}
+                        {% trans "Полная занятость, частичная занятость" %}
                     </li>
                     <li class="list-group-item">
                         <span class="font-weight-bold">{% trans "График работы" %}:</span>
                         {% trans "Удаленная работа, гибкий график" %}
                     </li>
-                    <li class="list-group-item">{% trans "Не готов к переезду, не готов к командировкам" %}</li>
+                    <li class="list-group-item">{% trans "Не готов к переезду, готов к командировкам" %}</li>
                 </ul>
             </div>
         </div>
@@ -48,6 +48,9 @@
                                 {% if LANGUAGE_CODE == "en" %}{{ work.time_en }}{% else %}{{ work.time }}{% endif %}
                             </h6>
                             {% if LANGUAGE_CODE == "en" %}{{ work.descr_en }}{% else %}{{ work.descr }}{% endif %}
+                        </div>
+                        <div class="card-footer">
+                            <p class="card-text"><small class="text-muted">{{ work.stack }}</small></p>
                         </div>
                     </div>
                 </div>
