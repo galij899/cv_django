@@ -1,7 +1,7 @@
 from django.db import models
 
 SHORT_FIELD = 100
-DESCRIPTION_LENGTH = 400
+DESCRIPTION_LENGTH = 600
 
 
 class Skill(models.Model):
