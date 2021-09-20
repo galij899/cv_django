@@ -1,2 +1,2 @@
-release: python manage.py migrate
+release: ./deploy.sh
 web: gunicorn cv_django.wsgi
