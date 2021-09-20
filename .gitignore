@@ -2,3 +2,4 @@
 /.idea/
 .DS_Store
 cv_django.iml
+__pycache__
